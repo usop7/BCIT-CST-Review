@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded|Roboto|Quicksand');
+
+body {
+  text-align: center;
+  font-family: 'Quicksand';
+  font-size: 11pt;
+  color: #494949;
+  margin: 0em;
+  padding: 0em;
+  background-color: #efefef;
+}
+a {
+  color: #5a5b5b;
+  text-decoration: none;
+}
+a:hover {
+  color: #3e72c1;
+  text-decoration: none;
+}
+#logo {
+  position:absolute;
+  top: 10px;
+  left: 30px;
+  width: 80px;
+}
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+  background-color: #f9f9f9;
+  box-shadow: 0 3px 1px -1px rgba(0,0,0,0.1);
+}
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.right {
+  text-align: right;
+}
+.black {
+  color: #000;
+}
+.roboto {
+  font-family: 'Roboto';
+}
+.textmenu {
+  margin: 0;
+  float: right;
+  padding: 0.5em;
+  font-size: 12pt;
+  font-weight: 300;
+}
+.textmenu span {
+  padding: 0 1em;
+}
+#menubtn {
+  display: none;
+}
+#searchbox {
+  position: absolute;
+  top: 25px;
+  left: calc(50% - 175px);
+  box-sizing: border-box;
+  border: 1px solid gray;
+  border-radius: 5px 0px 0px 5px;
+  width: 300px;
+  height: 35px;
+  padding-left: 0.5em;
+  margin: 0;
+  font-size: 12pt;
+  font-family: 'Quicksand';
+}
+#searchbox:focus {
+  outline: none;
+}
+
+#searchbtn {
+  position:absolute;
+  top: 25px;
+  left: calc(50% + 125px);
+  background-image: url('../img/search.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 35px;
+  box-sizing: border-box;
+  border: 1px solid #575759;
+  cursor: pointer;
+  background-color: #575759;
+  border-radius: 0px 5px 5px 0px;
+  outline: none;
+  margin: 0;
+}
+#menucontent {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  display: none;
+  margin: 0;
+}
+
+#menucontent p {
+  font-size: 12pt;
+  font-weight: 300;
+  margin: 0;
+  padding: 10px;
+}
+
+article {
+  box-sizing: border-box;
+  margin-top: 70px;
+  padding: 0;
+  transition: 0.5s;
+  min-height: calc(100vh - 105px);
+}
+
+.banner {
+  margin: 0;
+  background-image:url('../img/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+  color: white;
+  height: 35vw;
+  padding-top: 7.5vw;
+}
+.banner h1 {
+  font-family: 'Roboto';
+  color: #ffc000;
+  margin: 0 0 8px 0;
+  font-size: 9.5vw;
+}
+.banner p {
+  margin: 0;
+  font-size: 3vw;
+}
+.content {
+  box-sizing: border-box;
+  text-align: left;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 2em 0.5em;
+  width: 700px;
+  max-width: 95%;
+}
+h3 {
+  font-weight:400;
+  margin: 10px 0;
+}
+
+#form_div {
+  display: none;
+}
+#result_title {
+  display: none;
+}
+.share-div {
+  background-color: #f7f7f7;
+  border: 1px solid #cfd0d1;
+  padding: 0.5em;
+}
+
+/* average level */
+.level-table {
+  margin: 0 auto;
+}
+.level-result {
+  font-size: 40pt;
+  padding: 0 0 0 10px;
+  font-weight: 900;
+  color: gray;
+}
+
+/* level rating section */
+.rating-level{
+  margin: 1em 0;
+}
+#div-score {
+  position: relative;
+  top: -5px;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  font-size: 20pt;
+}
+.level {
+  cursor: pointer;
+  display: inline-block;
+  width: 38px;
+  height: 30px;
+  background-color: #d9dadb;
+}
+
+.posting {
+  padding: 1.2em 0.5em;
+  margin: 1em auto;
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.3);
+}
+.posting pre {
+  white-space: pre-line;
+  font-family: 'Quicksand';
+  font-size: 11pt;
+  padding: 0;
+  margin: 0;
+}
+.img_star {
+  width: 100px;
+  margin: 0.5em 0 0 0;
+}
+/* color of each lever */
+.level-green {
+  color: green;
+}
+.level-orange {
+  color: orange;
+}
+.level-red {
+  color: #bf4931;
+}
+
+.date {
+  font-size: 10pt;
+  color: gray;
+}
+.list_title {
+  text-align: center;
+  padding: 0 1em;
+  font-size: 15pt;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.rate_form {
+  text-align: center;
+  margin: 0 auto;
+  width: 700px;
+  max-width: 95%;
+}
+.rate_form p {
+  margin: 0.5em 0;
+}
+.post-detail {
+  display: none;
+}
+.input {
+  font-size: 12pt;
+  font-family: 'Quicksand';
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 30px;
+  width: 100%;
+  padding-left: 0.5em;
+  box-sizing: border-box;
+}
+.password {
+  font-size: 12pt;
+  font-family: 'Quicksand';
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+  height: 30px;
+  width: calc(100% - 105px);
+  padding-left: 0.5em;
+  box-sizing: border-box;
+}
+textarea {
+  font-size: 12pt;
+  font-family: 'Quicksand';
+  background-color: #e8e8e8;
+  border: none;
+  width: 100%;
+  padding-left: 0.5em;
+  padding-top: 0.5em;
+  box-sizing: border-box;
+}
+
+/* modal styling */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding-top: 33vh;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  box-sizing: border-box;
+  background-color: #fff;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,0.3);
+  width: 300px;
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 1em;
+}
+#close {
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  color: #aaaaaa;
+  cursor: pointer;
+}
+.morebtn {
+  float: right;
+  margin-right: 1em;
+  width: 15px;
+  height: 15px;
+  background-image: url('../img/edit.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn {
+  background-color: #1f3e70;
+  border: none;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-family: 'Quicksand';
+  font-size: 12pt;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: dimgray;
+}
+.smallbtn {
+  background-color: gray;
+  color: white;
+  border: none;
+  width: 60px;
+  height: 25px;
+  font-family: 'Quicksand';
+  text-align: center;
+  font-size: 11pt;
+  cursor: pointer;
+  margin-right: 0.5em;
+  padding: 0;
+}
+.white-div {
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em auto;
+}
+.contact img {
+  margin: 0 5px;
+}
+
+/************ Arcodion ***********************/
+.accordion_list {
+  box-sizing: border-box;
+  margin: 2em auto;
+  width: 600px;
+  max-width: 95%;
+}
+.accordion {
+  background-color: #dbdbdb;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15pt;
+  transition: 0.4s;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  text-align: left;
+  padding: 0em;
+  margin-bottom: 0.5em;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.panel p {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.option_title {
+  color: orange;
+}
+.blue {
+  color: #3e72c1;
+}
+#bcitlogo {
+  width: 150px;
+}
+footer p{
+  font-size: 10pt;
+  margin: 0;
+  padding: 0.5em;
+}
+#gototop {
+  background-image: url('../img/top.png');
+  background-position: center;
+  background-size:cover;
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #e0e1e2;
+  outline: none;
+  cursor: pointer;
+  opacity: 0.8;
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 10px;
+  z-index: 3;
+}
+
+
+/*********************************************/
+@media screen and (max-width: 1024px) {
+  #logo {
+    left: 5px;
+  }
+  header {
+    transition: 0.5s;
+  }
+  .textmenu {
+    display: none;
+  }
+  #menubtn {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position:absolute;
+    top: 15px;
+    right: 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20pt;
+  }
+  #searchbox {
+    top: 15px;
+    left: calc(50% - 100px);
+    width: 200px;
+  }
+  #searchbtn {
+    top: 15px;
+    left: calc(50% + 100px);
+    width: 35px;
+  }
+  .banner p {
+    font-size: 15pt;
+  }
+
+}
+
+@media screen and (max-width: 400px) {
+  #logo {
+    width: 70px;
+  }
+  #searchbox {
+    width: 145px;
+    left: calc(50% - 75px);
+  }
+  #searchbtn {
+    left: calc(50% + 70px);
+  }
+  .banner p {
+    font-size: 11pt;
+  }
+
+}
